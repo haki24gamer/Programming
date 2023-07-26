@@ -1,3 +1,5 @@
 #!/usr/bin/bash
 
-echo "Hello World"
+name="Haki"
+
+echo "Hello $name"
