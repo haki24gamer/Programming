@@ -1,3 +1,0 @@
-python3 /home/haki/Documents/Programming/Programming/Python/First/rehpic/rehpic_d.py
-ls ppp
-
