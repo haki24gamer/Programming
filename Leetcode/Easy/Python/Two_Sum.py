@@ -3,7 +3,7 @@
 run through the array nums, and add the numbers together until finding a result equivalent to the target
 """
 class Solution(object):
-    def twoSum(nums, target):
+    def twoSum(self, nums, target):
 
         n = len(nums)
         result = []
@@ -20,5 +20,5 @@ class Solution(object):
         
         return result
     
-print(Solution.twoSum([3,3],6))
+print(Solution().twoSum( nums=[3,3],target=6))
 
