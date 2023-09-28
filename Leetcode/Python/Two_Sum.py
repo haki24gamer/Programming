@@ -1,12 +1,12 @@
 #Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 """
-run through the array nums, and add the the numbers together until finding a result equivalent to the target
+run through the array nums, and add the numbers together until finding a result equivalent to the target
 """
 class Solution(object):
-    def twoSum():
-        nums = [3,3]
-        target = 6
+    def twoSum(nums, target):
+
         n = len(nums)
+        result = []
 
 
         for i in range(n):
@@ -15,7 +15,10 @@ class Solution(object):
                 if sum==target:
                     a=i
                     b=j
+        result.append(a)
+        result.append(b)
         
-        print("[",a,",",b,"]")
-Solution.twoSum()
+        return result
+    
+print(Solution.twoSum([3,3],6))
 
