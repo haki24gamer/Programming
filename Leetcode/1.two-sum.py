@@ -12,8 +12,6 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        print("Hello, World")
-    
-Solution().twoSum(5,3)
+        
 # @lc code=end
 
