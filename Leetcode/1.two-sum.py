@@ -12,6 +12,19 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
+        result = []
+        n = len(nums)
+
+        for i in range(n):
+            for j in range(i+1,n):
+                sum = nums[i] + nums[j]
+                if sum==target:
+                    a=i
+                    b=j
+        result.append(a)
+        result.append(b)
+        
+        return result
         
 # @lc code=end
 
