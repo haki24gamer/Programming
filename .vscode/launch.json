@@ -1,6 +1,13 @@
 {
     "configurations": [
         {
+            "type": "java",
+            "name": "simple",
+            "request": "launch",
+            "mainClass": "simple",
+            "projectName": "Programming_5f9d0d30"
+        },
+        {
             "name": "C/C++: gcc build and debug active file",
             "type": "cppdbg",
             "request": "launch",
