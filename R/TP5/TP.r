@@ -13,16 +13,13 @@ distpieces=table(pieces) #mettre la resultat dans un tableau
 #2
 de=sample(1:6, 1000, replace = T)
 distde=table(de)
-#barplot(distde)
+barplot(distde)
 sum(de==4)/1000
 
 
 
 #3
-de1=sample(1:6, 1000, replace = T)
-de2=sample(1:6, 1000, replace = T)
-S=de1+de2
-#print(S)
+
 #print(sum(S==7)/1000)
 
 #4
