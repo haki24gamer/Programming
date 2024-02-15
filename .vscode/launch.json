@@ -1,6 +1,12 @@
 {
     "configurations": [
-    
+        {
+            "type": "java",
+            "name": "td2",
+            "request": "launch",
+            "mainClass": "td.td2",
+            "projectName": "Programming_5f9d0d30"
+        },
         {
             "type": "java",
             "name": "simple",

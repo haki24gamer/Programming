@@ -17,6 +17,6 @@ int factRecur(int n)
 
 int main(int argc, char const *argv[])
 {
-    printf("%d",factRecur(5));
+    printf("%d",factRecur(4));
     return 0;
 }
