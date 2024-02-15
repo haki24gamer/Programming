@@ -1,0 +1,15 @@
+body {
+    background-color: bisque;
+    align-self: start;
+    margin-top: 9px;
+}
+  
+img {
+image-resolution: 21px;
+background-image: initial;
+border-radius: 11px;
+}
+
+img:hover {
+    cursor: pointer;
+}
