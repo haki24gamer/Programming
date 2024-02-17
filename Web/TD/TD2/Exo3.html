@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Formulaire du client
+        </title>
+    </head>
+    <body>
+        <form>
+            <table border="1">
+                <tr>
+                    <td>
+                        Civilite
+                    </td>
+                    <td>
+                        <input type="radio" name="Genre">Mademoiselle
+                        <input type="radio" name="Genre">Madame
+                        <input type="radio" name="Genre">Monsieur
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Nom/Prenom
+                    </td>
+                    <td>
+                        <input type="text" name="Nom/Prenom">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Adresse
+                    </td>
+                    <td>
+                        <input type="text" name="Adresse">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        No postal
+                    </td>
+                    <td>
+                        <input type="number" name="No postal">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Pays
+                    </td>
+                    <td>
+                        <select name="Pays">
+                            <option value="Djibouti" selected>Djibouti</option>
+                            <option value="Ethiopie">Ethiopie</option>
+                            <option value="Somalie">Somalie</option>
+                            <option value="Yemen">Yemen</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Platforme(s)
+                    </td>
+                    <td>
+                        <input type="checkbox" name="Platforme">Windows
+                        <input type="checkbox" name="Platforme">Macintosh
+                        <input type="checkbox" name="Platforme">Unix
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Application(s)
+                    </td>
+                    <td>
+                        <select name="Application(s)" size="5">
+                            <option value="Bureautique" selected>Bureautique</option>
+                            <option value="DAO">DAO</option>
+                            <option value="Statistique">Statistique</option>
+                            <option value="SGBD">SGBD</option>
+                            <option value="Internet">Internet</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
