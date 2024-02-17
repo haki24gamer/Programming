@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Programming_5f9d0d30"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Programming_5f9d0d30"
+        },
+        {
+            "type": "java",
+            "name": "Brocode",
+            "request": "launch",
+            "mainClass": "Brocode",
+            "projectName": "Programming_5f9d0d30"
+        },
+        {
+            "type": "java",
             "name": "td2",
             "request": "launch",
             "mainClass": "td.td2",

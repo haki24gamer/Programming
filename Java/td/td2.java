@@ -10,11 +10,8 @@ public class td2 {
         }
         for (i = 0; i < taille; i++) {
             if (t[i]==min) {
-<<<<<<< HEAD
                 occurence++;  
-=======
                 occurence++;
->>>>>>> 64be034f6489b4e3c760dab40fc6d0e325b4e974
             }
         }
         System.out.println("Le minimum est "+min+" il se trouve "+occurence+" fois dans le tableau");
