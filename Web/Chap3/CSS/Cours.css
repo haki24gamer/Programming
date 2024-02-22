@@ -1,0 +1,13 @@
+body{
+    background-color: orange;
+}
+
+p{
+    color: blue;
+    font-size: 20px;
+    text-align:center;
+}
+
+#p1{
+    color: red;
+}
