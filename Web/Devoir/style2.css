@@ -1,0 +1,29 @@
+#TitreCours {
+    height: 100px;
+    background-color: orange;
+}
+#en-tete{
+    
+    width:100%;
+    height: 50px;
+    background-color: aqua;
+}
+#LangHTML {
+    text-align: center;
+}
+
+
+#Tab2 {
+    width:100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+footer{
+    text-align: center;
+    background-color: olive;
+    font-style: italic;
+}

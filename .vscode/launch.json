@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TD4",
+            "request": "launch",
+            "mainClass": "TD.TD4",
+            "projectName": "Programming_5f9d0d30"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Main",
