@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "GUI",
+            "request": "launch",
+            "mainClass": "GUI",
+            "projectName": "Programming_5f9d0d30"
+        },
+        {
+            "type": "java",
+            "name": "Input",
+            "request": "launch",
+            "mainClass": "Input",
+            "projectName": "Programming_5f9d0d30"
+        },
+        {
+            "type": "java",
+            "name": "hello",
+            "request": "launch",
+            "mainClass": "Java.Brocode.Test.hello",
+            "projectName": "Programming_5f9d0d30"
+        },
+        {
+            "type": "java",
             "name": "TD4",
             "request": "launch",
             "mainClass": "TD.TD4",

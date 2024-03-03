@@ -1,3 +1,5 @@
+package Regroup.Article.src;
+
 public class Article {
     private int PrixHT;
     private String Designation;

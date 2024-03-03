@@ -2,14 +2,12 @@ package TD;
 
 public class Cercle {
     private float rayon;
-    private Point point;
+    //private Point point;
 
-    public static float getRayon(){
-        return this.rayon;
+    public float getRayon(){
+        return rayon;
     }
 
 
-    return this.point;
-    }
 
 }
