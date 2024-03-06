@@ -1,3 +1,27 @@
-body{
-    background-color: aqua;
+
+*{
+    margin:0;
+    background:bisque;
+}
+
+h3{
+    font-style:italic;
+    color:gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    border: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+h1{
+    text-shadow: 2px 2px 2px blue;
+}
+
+.border{
+    border: 3px solid navy;
 }

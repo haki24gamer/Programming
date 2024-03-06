@@ -1,41 +1,54 @@
 public class Person {
-    //Attributs
-    String name = "name";
-    boolean exist = true;
+    /**Attributs**/
+    private String name = "name";
+    private boolean exist = true;
     private int age;
-    //float length = 185f;
-    double length = 185;
-    char tag = 'A';
+    //private float length = 185f;
+    private double length = 185;
+    private char tag = 'A';
 
-    //Method
-    void Speak(){
+    static int population;
+
+    /**Method**/
+    public void Speak(){
         System.out.println("Wawa");
     }
 
-    //setter
-    void setAge(int age){
+    /**setter**/
+    public void setAge(int age){
         this.age=age;
     }
-
-    //getter
-    int getAge(){
+    /**getter**/
+    public int getAge(){
         return age;
     }
 
     //private et public
     
 
-    //constructeur
+    /****/
+    /**constructeur**/
     public Person(){
-
+        population++;
     }
     public Person(String name, int age, double length, char tag){
         this.name=name;
         this.age=age;
         this.length=length;
         this.tag=tag;
+
+        population++;
     }
 
     //static
-    
+
+    /**Afficher**/
+    public void Introduce(){
+        if (exist) {
+            System.out.printf("Hi, I am %s, %d years old, %d cm and %c tagged \n", name, age, length, tag);
+        } else {
+            System.out.println("Sorry g. I ain't alive");
+        }
+    }
+
 }

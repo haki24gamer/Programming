@@ -4,24 +4,25 @@ public class Point {
     private double x,y;
 
     public double getterX(){
-        return this.x;
+        return x;
     }
-    public void setterX(double ValX){
-        this.x=ValX;
+    public void setterX(double x){
+        this.x=x;
     }
 
     public double getterY(){
-        return this.y;
+        return y;
     }
-    public void setterY(double ValY){
-        this.y=ValY;
+    public void setterY(double y){
+        this.y=y;
     }
-    public Point (double X,double Y){
-        this.x=X;
-        this.y=Y;
+
+    public Point (double x,double y){
+        this.x=x;
+        this.y=y;
     }
 
     public void Afficher() {
-        System.out.println("x="+x+"\ny="+y);
+        System.out.println("x="+x+" y="+y);
     }
 }

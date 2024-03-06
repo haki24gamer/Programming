@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "Programming_5f9d0d30"
+        },
+        {
+            "type": "java",
             "name": "GUI",
             "request": "launch",
             "mainClass": "GUI",

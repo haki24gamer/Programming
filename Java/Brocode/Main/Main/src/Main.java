@@ -10,8 +10,9 @@ public class Main {
         Person Hassan = new Person();
 
         
-        p1.Speak();
-        //p1.Introduce();
+        //p1.Speak();
+        // Hassan.Introduce();
+        
 
         /* Public */
         // p1.age=27;
@@ -20,6 +21,7 @@ public class Main {
         /*Private*/
         // p1.setAge(27);
         // System.out.println(p1.getAge());
+        System.out.println(Person.population);
 
 
     }

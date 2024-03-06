@@ -5,64 +5,69 @@
         <title>Exo1</title>
     </head>
     <body>
-        <table border="1" cellspacing="1" cellpadding="1" width="500px" >
-            <tr>
-                <td colspan="3">
-                    Tarif
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Article 1
-                </td>
-                <td>
-                    Ref002
-                </td>
-                <td>
-                    30fr
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    deux colonnes fusionnes
-                </td>
-                <td>
-                    cellule 1
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    cellule 2
-                </td>
-                <td>
-                    cellule 3
-                </td>
-                <td rowspan="2">
-                    deux lignes fusionnes
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Cellule 4
-                </td>
-                <td>
-                    Cellule 5
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Cellule 6
-                </td>
-                <td colspan="2" rowspan="2">
-                    Deux lignes et deux colonnes fusionnes
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Cellule 7
-                </td>
-            </tr>
+        <form name="fORM CLIENT" method="post">
             
+        <center>
+            <h1>Formulaire du client</h1>
+        <table border="1">
+            <tr>
+                <td>Civilite</td>
+                <td>
+                    <input type="radio" name="Civilite" value="Mademoiselle">Mademoiselle
+                    <input type="radio" name="Civilite" value="Madam">Madam
+                    <input type="radio" name="Civilite" value="Monsieur">Monsieur
+                </td>
+            </tr>
+            <tr>
+                <td>Nom/Prenom</td>
+                <td>
+                    <input type="text" name="Nom/Prenom" size="40">
+                </td>
+            </tr>
+            <tr>
+                <td>Adresse</td>
+                <td> <input type="text" name="Adresse" size="40"></td>
+            </tr>
+            <tr>
+                <td>No postal</td>
+                <td>
+                    <input type="number">
+                </td>
+            </tr>
+            <tr>
+                <td>Pays</td>
+                <td>
+                    <select name="Pays">
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="Somalia">Somalia</option>
+                        <option value="Yemen">Yemen</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Plateform(s)</td>
+                <td>
+                    <input type="checkbox" name="Plateform">Windows
+                    <input type="checkbox" name="Plateform">Mac
+                    <input type="checkbox" name="Plateform">Unix
+                </td>
+            </tr>
+            <tr>
+                <td>Application(s)</td>
+                <td>
+                    <select name="Application" size="5">
+                        <option>Bur</option>
+                        <option>DAIO</option>
+                        <option>Stata</option>
+                        <option>SGBD</option>
+                        <option>Inrree</option>
+                    </select>
+                </td>
+            </tr>
         </table>
+        <input type="submit" value="Soumettre formulaire">
+        <input type="reset" value="Effacer">
+        </center>
+    </form>
     </body>
 </html>
