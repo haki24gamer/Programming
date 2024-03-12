@@ -1,0 +1,27 @@
+.div0{
+    margin:30%;
+    border-radius: 15px;
+}
+
+.p1{
+    text-shadow: 2px 2px 2px blue;
+}
+
+.div1{
+    padding: 5px 9px 7px 8px;
+    width:500px;
+}
+
+.paragraphe1{
+    line-height: 20px;
+    margin-left: 50px;
+    border: 20px solid;
+    border-radius: 10px;
+    border-color: red;
+}
+
+li a {
+    display: inline-block;
+    color: brown;
+    text-decoration: none;
+}
