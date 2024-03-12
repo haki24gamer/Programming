@@ -5,23 +5,23 @@ Parcours en ordre (infixe) de l'arbre :
 1 3 5 6 8 10 12 15 20
 */
 
-// Définition de la structure du nœud
+// Dï¿½finition de la structure du nï¿½ud
 typedef struct Node {
-    int key; // Clé du nœud
-    struct Node* left; // Pointeur vers le nœud fils gauche
-    struct Node* right; // Pointeur vers le nœud fils droit
+    int key; // Clï¿½ du nï¿½ud
+    struct Node* left; // Pointeur vers le nï¿½ud fils gauche
+    struct Node* right; // Pointeur vers le nï¿½ud fils droit
 } Node;
 
-// Fonction pour imprimer un arbre binaire en ordre croissant des clés
+// Fonction pour imprimer un arbre binaire en ordre croissant des clï¿½s
 void printTree(Node *tree) {
     if (!tree) return; // Si l'arbre est vide, retourne
     if (tree->left) printTree(tree->left); // Imprime le sous-arbre gauche
-    printf("Cle = %d\n", tree->key); // Imprime la clé du nœud actuel
+    printf("Cle = %d\n", tree->key); // Imprime la clï¿½ du nï¿½ud actuel
     if (tree->right) printTree(tree->right); // Imprime le sous-arbre droit
 }
 
 int main() {
-    // Création de l'arbre binaire
+    // Crï¿½ation de l'arbre binaire
     Node* root = (Node*)malloc(sizeof(Node));
     root->key = 10;
 
@@ -58,7 +58,7 @@ int main() {
     printf("Impression de l'arbre :\n");
     printTree(root);
 
-    // Libération de la mémoire allouée pour l'arbre
+    // Libï¿½ration de la mï¿½moire allouï¿½e pour l'arbre
     free(root->left->left->left);
     free(root->left->left);
     free(root->left->right->left);
