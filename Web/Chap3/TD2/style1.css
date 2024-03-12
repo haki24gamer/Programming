@@ -1,17 +1,18 @@
 body{
-    margin:100px;
+    padding: 100px;
     background-color: white;
 }
 
 h1,h2{
-    font-family: Arial, Helvetica, sans-serif;
-    color:aqua;
+    font-family: Arial;
+    color: aqua;
 }
+
 ul{
-    list-style-type: ;
+    list-style: square;
 }
+
 ol{
-    list-style-type: 'I';
-    list-style-type: disc;
-    list-style-type: ;
+    list-style-type: upper-roman;
+    text-transform: uppercase;
 }
