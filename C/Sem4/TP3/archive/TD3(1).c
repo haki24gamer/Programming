@@ -36,6 +36,7 @@ void lister_feuilles(Arbre_B *arbre) {
 // Fonction pour calculer la taille de l'arbre
 int taille(Arbre_B *arbre) {
     if (arbre == NULL) return 0;
+
     return 1 + taille(arbre->gauche) + taille(arbre->droit);
 }
 
@@ -100,7 +101,7 @@ void afficher_racine(Arbre_B *arbre) {
 }
 
 int main() {
-    // Cr�ation de l'arbre binaire T
+    // Cr�ation classique de l'arbre binaire T 
     Arbre_B *arbre = (Arbre_B*)malloc(sizeof(Arbre_B));
     arbre->valeur = 37;
     arbre->gauche = (Arbre_B*)malloc(sizeof(Arbre_B));
@@ -135,6 +136,19 @@ int main() {
     arbre->droit->droit->gauche->gauche = NULL;
     arbre->droit->droit->gauche->droit = NULL;
     arbre->droit->droit->droit = NULL;
+
+    //Creation avec la fonction creerArbre
+    Arbre_B* A = creerArbre(3,creerArbre(5,NULL,NULL),creerArbre(23,NULL,NULL));
+    Arbre_B* B = creerArbre(13,NULL,A);
+    Arbre_B* C = creerArbre(41,B,NULL);
+    Arbre_B* D = creerArbre(11,creerArbre(19,NULL,NULL),NULL);
+    Arbre_B* E = creerArbre(2,creerArbre(7,NULL,NULL),D);
+    
+    Arbre_B* racine = creerArbre(37,C,E);
+   
+   
+   // 
+    parcours_infixe(racine); 
 
     // Affichage de l'arbre
     printf("Affichage de l'arbre en ordre infix�:\n");
@@ -192,5 +206,6 @@ int main() {
 
     return 0;
     printf("tu vas jamais me voire !!!!!!!!!");
+
 }
 
