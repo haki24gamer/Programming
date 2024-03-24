@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <php
+    $nom = $_POST["nom"];
+    $nb = strlen($nom);
+    $som=0;
+    for($i=0;$i<=$nb;$i++)
+    {$som=$som+$i;}
+    echo "le nom est $nom, il a $nb caracteurs la somme de caractere est $som";
+    ?>
+
+    <form method="post">
+        Calculatrice
+
+        valeur 1: <input type="text" name="nom" id="nom">
+        valeur 2: <input type="text" name="nom" id="nom">
+    </form>
+</body>
+</html>
