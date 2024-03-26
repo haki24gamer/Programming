@@ -1,23 +1,22 @@
 <?php
-$num=$_POST["Numero"];
-echo "le numero est: ", $num;
+    $num=$_POST["Numero"];
+    echo "le numero est: ", $num;
 
-$nom=$_POST["Nom"];
-echo "le nom est: ", $nom;
+    $nom=$_POST["Nom"];
+    echo "<br>le nom est: ", $nom;
 
-$motdepasse=$_POST["MotDePasse"];
-echo "le mot de passe est: ", $motdepasse;
+    $motdepasse=$_POST["MotDePasse"];
+    echo "<br>le mot de passe est: ", $motdepasse;
 
-$sexe = $_POST["Sexe"];
-echo "le sexe est: ", $sexe;
+    $sexe = $_POST["Sexe"];
+    echo "<br>le sexe est: ", $sexe;
 
-$filiere = $_POST["Filiere"];
-echo "la filiere est: ", $filiere;
+    $filiere = $_POST["Filiere"];
+    echo "<br>la filiere est: ", $filiere;
 
-$email = $_POST["Email"];
-echo "la email est: ", $email;
+    $email = $_POST["Email"];
+    echo "<br>la email est: ", $email;
 
-
-$adresse = $_POST["Adresse"];
-echo "l adresse est: ", $adresse;
+    $adresse = $_POST["Adresse"];
+    echo "<br>l adresse est: ", $adresse;
 ?>

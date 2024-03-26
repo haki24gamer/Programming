@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../../../opt/lampp/htdocs/www"
+		}
+	],
+	"settings": {
+		"r.lsp.promptToInstall": false,
+		"CodeGPT.apiKey": "OpenAI",
+		"liveServer.settings.multiRootWorkspaceName": "www"
+	}
+}
