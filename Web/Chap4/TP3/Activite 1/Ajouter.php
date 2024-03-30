@@ -21,6 +21,7 @@
 
     $insertion = "INSERT INTO etudiant VALUES ('$num', '$nom', '$mdp', '$sexe', '$filiere', '$email', '$adresse')";
 
+
     mysqli_query($conn,$insertion);
 
 
