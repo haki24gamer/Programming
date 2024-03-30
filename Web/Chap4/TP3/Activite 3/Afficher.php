@@ -11,12 +11,13 @@
 
 
     //Variables
-    $num = $_POST["Numero"];
+    $sql = "SELECT * FROM etudiant";
 
-    $suppresion = "DELETE FROM etudiant WHERE numero_etudiant='$num'";
+    $afficher=mysqli_query($conn,$sql);
 
-
-    mysqli_query($conn,$suppresion);
+    while ($ligne = mysqli_fetch_row($afficher)) {
+        echo $ligne[0].", ".$ligne[1].", ".$ligne[2].", ".$ligne[3].", ".$ligne[4].", ".$ligne[5].", ".$ligne[6]."<br>";
+    }
 
     mysqli_close($conn);
 ?>
