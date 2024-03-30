@@ -1,8 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 //Q1
-typedef struct Node
-{
+typedef struct Node{
     int val;
     struct Node* fgauche;
     struct Node* fdroite;
