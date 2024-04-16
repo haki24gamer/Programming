@@ -8,8 +8,6 @@
 
     $conn = mysqli_connect("$serveur","$utilisateur","$motdepasse","$base");
 
-
-
     //Variables
     $num = $_POST["Numero"];
 
@@ -17,6 +15,7 @@
 
     $afficher=mysqli_query($conn,$sql);
 
+    
     $ligne = mysqli_fetch_row($afficher);
 
     echo "
@@ -38,10 +37,10 @@
                 <td>$ligne[4]</td>
                 <td>$ligne[5]</td>
                 <td>$ligne[6]</td>
-                <td>$ligne[7]</td>
             </tr>
         </table>
         ";
+    echo "<a href='../Activite 5/Menu.html'><button>Retourner</button></a>";
     
 
     mysqli_close($conn);

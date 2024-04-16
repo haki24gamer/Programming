@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="EtudiantAjout.php">
+        <table border="1">
+            <tr>
+                <td>Numero:</td>
+                <td><input type="number" name="Numero"></td>
+            </tr>
+            <tr>
+                <td>Nom et prenom:</td>
+                <td><input type="text" name="Nom"></td>
+            </tr>
+            <tr>
+                <td>Mot de passe:</td>
+                <td><input type="password" name="MotDePasse"></td>
+            </tr>
+            <tr>
+                <td>Sexe:</td>
+                <td>
+                    <input type="radio" name="Sexe" value="Masculin"> M
+                    <input type="radio" name="Sexe" value="Feminin"> F
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="Email"></td>
+            </tr>
+            <tr>
+                <td>Adresse:</td>
+                <td><input type="text" name="Adresse"></td>
+            </tr>
+            <tr>
+                <td>Filiere:</td>
+                <td>
+                    <input type="number" name="Numfil">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="reset" value="Annuler">
+                    <input type="submit" value="Ajouter">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

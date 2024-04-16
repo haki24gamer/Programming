@@ -11,12 +11,17 @@
 
 
     //Variables
-    $num = $_POST["Numero"];
+    $numero_etudiant = $_POST["Numero"];
 
-    $suppresion = "DELETE FROM etudiant WHERE numero_etudiant='$num'";
+    $suppresion = "DELETE FROM etudiant WHERE numero_etudiant='$numero_etudiant'";
 
 
     mysqli_query($conn,$suppresion);
 
+    
+    echo "<a href='../Activite 5/Menu.html'><button>Retourner</button></a>";
+
+
     mysqli_close($conn);
+
 ?>
