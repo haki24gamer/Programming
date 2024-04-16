@@ -58,7 +58,7 @@ public class Livre {
 
     // Methode MemeAuteur
     public String MemeAuteur(Livre L2) {
-        if (this.Auteur.equal(L2.getAuteur()))
+        if (this.Auteur.equals(L2.getAuteur()))
             return ("Meme auteur");
         else
             return ("Auteur different");
