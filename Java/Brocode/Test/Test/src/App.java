@@ -1,12 +1,15 @@
-
+import java.util.Scanner;
+import java.util.Scanner;
 
 public class App {
-    /**
-     * @param args
-     */
 
     public static void main(String[] args) {
-        int[] var;
+        Scanner sc = new Scanner(System.in);
+        LivreFiction HarryPotter = new LivreFiction();
+        
 
+        HarryPotter.Ecrivain= sc.nextLine();
+
+        HarryPotter.Qui();
     }
 }
