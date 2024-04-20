@@ -7,6 +7,8 @@ public class Employe {
     private int DateEmbauche;
     private int Salaire;
 
+    public static int NbrDeEmploye;
+
     public int getMatricule() {
         return Matricule;
     }
@@ -37,6 +39,8 @@ public class Employe {
         DateNaissance = dateNaissance;
         DateEmbauche = dateEmbauche;
         Salaire = salaire;
+
+        NbrDeEmploye++;
     }
 
 
@@ -61,10 +65,16 @@ public class Employe {
     }
 
 
-    public void AfficherEmp() {
-        System.out.println("Matricule=" + Matricule + ", Nom=" + Nom + ", Prenom=" + Prenom + ", DateAA=" + DateAA
-        + ", DateNaissance=" + DateNaissance + ", DateEmbauche=" + DateEmbauche + ", Salaire=" + Salaire + "]");
+    // public void AfficherEmp() {
+    //     System.out.println("Matricule=" + Matricule + ", Nom=" + Nom + ", Prenom=" + Prenom + ", DateAA=" + DateAA
+    //     + ", DateNaissance=" + DateNaissance + ", DateEmbauche=" + DateEmbauche + ", Salaire=" + Salaire + "]");
+    // }
+    
+    @Override
+    public String toString() {
+        String MyString = "Matricule=" + Matricule + ", Nom=" + Nom + ", Prenom=" + Prenom + ", DateAA=" + DateAA
+         + ", DateNaissance=" + DateNaissance + ", DateEmbauche=" + DateEmbauche + ", Salaire=" + Salaire + "]";
+        return MyString;
     }
-
     
 }

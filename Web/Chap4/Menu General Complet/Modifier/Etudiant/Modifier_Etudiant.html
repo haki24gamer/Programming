@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <title>Modifier</title>
+  </head>
+  <body>
+    <h1>Modifier un Etudiant</h1>
+    <!-- <div> -->
+    <form method="POST" action="Modifier_Etudiant.php">
+      <a href="Modifier.html">Retour</a>
+      <table border="2">
+        <tr>
+          <td>
+            <label for="Num"><b>Numéro de l'étudiant a modifier</b></label>
+          </td>
+          <td><input type="number" name="Num" id="Num" /></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="Numero">Numéro :</label>
+          </td>
+          <td><input type="number" name="numero" id="Numero" /><br /></td>
+        </tr>
+
+        <tr>
+          <td><label for="Nom">Nom et prénom: </label></td>
+          <td>
+            <input
+              type="text"
+              name="Nom"
+              id="Nom"
+              placeholder="Abdoulkader Farah Ousman"
+            />
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="mdp">Mot de passe: </label></td>
+          <td>
+            <input
+              type="password"
+              name="mdp"
+              id="mdp"
+              required="required"
+            /><br />
+          </td>
+        </tr>
+        <tr>
+          <td>Sexe:</td>
+          <td>
+            <label for="Masculin">M</label>
+            <input
+              type="radio"
+              name="Sexe"
+              id="Masculin"
+              value="Masculin"
+              checked="checked"
+            />
+            <input type="radio" name="Sexe" id="Feminin" value="Feminin" />
+            <label for="Feminin">F</label>
+            <select name="Niveau_filiere">
+              <option value="L1">L1</option>
+              <option value="L2">L2</option>
+              <option value="L3">L3</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Num_Filière:</td>
+          <td>
+            <select name="num_filiere" id="num_filiere">
+              <optgroup label="Faculte de la science:">
+                <option value="1">1-Informatique</option>
+                <option value="2">2-Physique-Chimie</option>
+                <option value="3">3-Biologie-Geologie</option>
+                <option value="4">4-Géni-Civile</option>
+                <option value="5">5-Géni-Electrique</option>
+                <option value="6">6-Géni-Mécanique</option>
+                <option value="7">7-Mathématique</option>
+                <option value="8">8-BBA</option>
+              </optgroup>
+              <optgroup label="FDEG">
+                <option value="9">9-Droit</option>
+                <option value="10">10-DGE</option>
+                <option value="11">11-EG</option>
+              </optgroup>
+              <optgroup label="FLASH">
+                <option value="12">12-Anglais</option>
+                <option value="13">13-Lettre Moderne</option>
+                <option value="14">14-Géographie</option>
+              </optgroup>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td>
+            <input
+              type="email"
+              name="Email"
+              id="Email"
+              placeholder="abdoulkadernamso@gmail.com"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="adresse"> Adresse: </label></td>
+          <td>
+            <textarea name="Adresse" id="Adresse" cols="25" rows="2"></textarea
+            ><br />
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="reset" value="Annuler" />
+            <input type="submit" value="Modifier" />
+          </td>
+        </tr>
+      </table>
+    </form>
+    <!-- </div> -->
+  </body>
+</html>

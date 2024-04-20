@@ -1,12 +1,16 @@
 public class docteur {
-    private String nom, hopital;
+    protected String nom = "defaut";
+    protected String hopital = "defaut";
 
-    public docteur (String n, String m){
-        nom = n;
-        hopital = m;
+    docteur (String nom, String hopital){
+        this.nom = nom;
+        this.hopital = hopital;
     }
+
+
 
     public void affiche(){
         System.out.println("Nom: "+nom+" a l hopital "+hopital);
     }
+
 }

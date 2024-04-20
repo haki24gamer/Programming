@@ -19,7 +19,7 @@
 
     $sql = "INSERT INTO Etudiant VALUES ('$num', '$nom', '$mdp', '$sexe', '$email', '$adresse', '$filiere')";
 
-    $insertion = mysqli_query($conn,$sql);
+    $insertion = mysqli_query($conn,$sql);+
 
     mysqli_close($conn);
 ?>

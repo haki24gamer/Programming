@@ -37,7 +37,6 @@ int Pile_pleine(Pile P){
     {
         return 0;
     }
-    
     else
     {
         return 1;
