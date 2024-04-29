@@ -17,9 +17,11 @@
     $adresse = $_POST["Adresse"];
     $filiere = $_POST["Numfil"];
 
-    $sql = "INSERT INTO Etudiant VALUES ('$num', '$nom', '$mdp', '$sexe', '$email', '$adresse', '$filiere')";
+    
+    $sql = "UPDATE Etudiant SET numero_etudiant = '$num', nom_etudiant = '$nom', mot_passe_etudiant = '$mdp', sexe_etudiant = '$sexe', email_etudiant = '$email', adresse_etudiant = '$adresse', num_filiere = '$filiere' WHERE numero_etudiant = '$num'";
+
 
     $insertion = mysqli_query($conn,$sql);
 
-    mysqli_close($conn);
+    
 ?>

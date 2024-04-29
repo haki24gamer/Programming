@@ -2,13 +2,14 @@
 #include <stdlib.h> // Pour malloc et free
 #include <stdbool.h>
 
-// type des éléments
+// type des ï¿½lï¿½ments
 typedef int Type_C; 
 // type Cellule
 typedef struct cellule {
     Type_C valeur;
     struct cellule *suivant;
 } Cellule;
+
 // type Pile
 typedef Cellule *Pile;
 
@@ -17,21 +18,21 @@ void Init_Pile(Pile *pile) {
     *pile = NULL;
 }
 
-// Vérifier si la pile est vide
+// Vï¿½rifier si la pile est vide
 bool Pile_vide(Pile pile) {
     return pile == NULL;
 }
 
-// Vérifier si la pile est pleine
+// Vï¿½rifier si la pile est pleine
 bool Pile_pleine() {
-    return false; // Une liste chaînée ne peut pas être pleine
+    return false; // Une liste chaï¿½nï¿½e ne peut pas ï¿½tre pleine
 }
 
-// Ajouter une valeur à la pile (empiler)
+// Ajouter une valeur ï¿½ la pile (empiler)
 void Empiler(Pile *pile, Type_C valeur) {
     Cellule *nouvelle_cellule = malloc(sizeof(Cellule));
     if (nouvelle_cellule == NULL) {
-        fprintf(stderr, "Erreur : impossible d'allouer de la mémoire.\n");
+        fprintf(stderr, "Erreur : impossible d'allouer de la mï¿½moire.\n");
         exit(EXIT_FAILURE);
     }
     nouvelle_cellule->valeur = valeur;
@@ -39,7 +40,7 @@ void Empiler(Pile *pile, Type_C valeur) {
     *pile = nouvelle_cellule;
 }
 
-// Supprimer une valeur de la pile (dépiler)
+// Supprimer une valeur de la pile (dï¿½piler)
 void Depiler(Pile *pile, Type_C *valeur) {
     if (Pile_vide(*pile)) {
         fprintf(stderr, "Erreur : la pile est vide.\n");
@@ -55,7 +56,7 @@ int main() {
     Pile maPile;
     Init_Pile(&maPile);
 
-    // Tester les opérations de la pile
+    // Tester les opï¿½rations de la pile
     if (Pile_vide(maPile)) {
         printf("La pile est vide \n");
     } else {
@@ -67,9 +68,9 @@ int main() {
 
     Type_C sommet;
     Depiler(&maPile, &sommet);
-    printf("Valeur dépilée : %d\n", sommet);
+    printf("Valeur dï¿½pilï¿½e : %d\n", sommet);
 
-        // Tester les opérations de la pile
+        // Tester les opï¿½rations de la pile
     if (Pile_vide(maPile)) {
         printf("La pile est vide \n");
     } else {

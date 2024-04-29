@@ -107,13 +107,21 @@ select count(*) as nbrArticle from article;
 select count(*) as nbrVente from vente;
 
 
+
 /* TP8 */
 //1
-select des,frs.nom from article,frs where article.num_f=frs.num_f;
-SELECT * FROM Article WHERE num_f IN (SELECT num_f FROM Frs WHERE ville = 'Gabes');
+select des,frs.nom 
+from article,frs 
+where article.num_f=frs.num_f;
+
+SELECT * FROM Article 
+WHERE num_f IN (SELECT num_f FROM Frs WHERE ville = 'Gabes');
+
 select vente.* from vente,article where vente.num_a=article.num_a and article.couleur='Vert';
+
 SELECT *
 FROM Article WHERE num_f IN (SELECT num_f FROM Frs WHERE ville = 'Sousse') OR des LIKE 'A%';
+
 select vente.* from vente,article where vente.num_a=article.num_a and prix_vente>prix_achat*2;
 //6
 select des,loc,qte,dat
@@ -211,18 +219,21 @@ select c1.nom
     and c2.num_c='C2';
 
 
-/* TP9 */
+/* TP 9 */
+
 //1
 select des
-    from article
-    join vente on vente.num_a=article.num_a
+    from article,vente
+    where vente.num_a=article.num_a
     group by des
     having count(*)>3;
+    
 //2
 select des
     from article
     where (select count(*) from vente where vente.num_a=article.num_a)
     > (select count(*) from vente where num_a='A1');
+
 //3
 select loc
     from magasin
@@ -323,6 +334,7 @@ WHERE F1.ville = F2.ville;
 SELECT des
     FROM Article
     WHERE num_a NOT IN (SELECT num_a FROM Vente);
+
 
 select * from magasin;
 select * from frs;

@@ -24,7 +24,6 @@ bool Pile_pleine() {
     return false;
 }
 
-
 void Empiler(Pile *pile, Type_C valeur) {
     Cellule *nouvelle_cellule = malloc(sizeof(Cellule));
     if (nouvelle_cellule == NULL) {

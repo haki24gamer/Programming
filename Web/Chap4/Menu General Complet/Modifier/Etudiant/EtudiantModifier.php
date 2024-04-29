@@ -39,8 +39,15 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post" action="EtudiantAjout.php">
+    <form method="post" action="V2.php">
         <table border="1">
+
+            <tr>
+                <td>
+                <b>Numéro de l'étudiant a modifier</b>
+                </td>
+                <td><input type="number" name="Num" value="<?php echo $Num; ?>"></td>
+            </tr>
             <tr>
                 <td>Numero:</td>
                 <td><input type="number" name="Numero" value="<?php echo $Num; ?>"></td>
