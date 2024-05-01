@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -66,7 +67,7 @@ int main() {
     int i ,temp;
     
 	for (i=0;i < N;i++){
-		printf("veuillez saisir la valeur %d a ajouter : ",i);
+        printf("veuillez saisir la valeur %d a ajouter : ",i);
 		scanf("%d",&temp);
 		Empiler(&maPile, temp);
 	}
