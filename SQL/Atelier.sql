@@ -73,8 +73,7 @@ insert into vente values ('C3','A4','M3',300,430.5,to_date('17-6-2009','dd-mm-yy
 insert into vente values ('C1','A1','M2',20,220,to_date('22-3-2008','dd-mm-yyyy'));
 insert into vente values ('C3','A5','M2',100,130.3,to_date('3-10-2007','dd-mm-yyyy'));
 
-
-//Modifier les contenus
+--Modifier les contenus
 update client set nom='Med Ghribi' where num_c='C3';
 update article set prix_achat=20 where num_A='A5';
 update article set poids=10;
@@ -105,8 +104,6 @@ select * from client where nom like '_aa%';
 select * from vente where dat='1-OCT-2007';
 select count(*) as nbrArticle from article;
 select count(*) as nbrVente from vente;
-
-
 
 /* TP8 */
 //1
@@ -176,8 +173,8 @@ select client.num_c
 select vente.*
     from vente, article,frs
     where vente.num_a=article.num_a
-    and poids between 200 and 500
     and article.num_f=frs.num_f
+    and poids between 200 and 500
     and couleur='Vert'
     and ville in ('Sousse', 'Gabes');
 //16
@@ -202,7 +199,7 @@ select vente.num_a
     from vente,frs,article
     where vente.num_a=article.num_a
     and article.num_f=frs.num_f
-    and frs.ville='Gebes'
+    and frs.ville='Gabes'
     group by vente.num_a
     having sum(qte)>200;
 //20
@@ -229,10 +226,11 @@ select des
     having count(*)>3;
     
 //2
+
 select des
     from article
-    where (select count(*) from vente where vente.num_a=article.num_a)
-    > (select count(*) from vente where num_a='A1');
+    where num_a in (select num_a from vente group by num_a having count(*) > 
+    (select count(*) from vente where num_a='A1'));
 
 //3
 select loc
@@ -242,6 +240,7 @@ select loc
         from vente
         group by num_m
         having count(*)>=3);
+
 //4
 select num_m,loc
     from magasin
@@ -250,6 +249,7 @@ select num_m,loc
         from vente
         where num_a in ('A1','A2')
     );
+
 //5
 select num_m, num_a,count(*) as nbrVente
     from vente
@@ -268,8 +268,7 @@ select nom
 //8      ????
 select num_m
     from (select num_m,count(distinct num_a) as nbrArticle from vente group by num_m)
-    where nbrArticle = (select count(distinct num_a) from article)
-    ;
+    where nbrArticle = (select count(distinct num_a) from article);
 //9
 select des, poids, couleur
     from article
@@ -335,7 +334,6 @@ SELECT des
     FROM Article
     WHERE num_a NOT IN (SELECT num_a FROM Vente);
 
-
 select * from magasin;
 select * from frs;
 select * from client;
@@ -343,8 +341,4 @@ select * from article;
 select * from vente;
 
 select * from frs_sousse;
-
-
-
-
 
