@@ -11,9 +11,9 @@ public class Vehicule {
         this.NbrRoues = NbrRoues;
         this.TypeDeMoteur = TypeDeMoteur;
         ListeDePieces = new ArrayList<String>();
-        nombre++;
         NumImmat=nombre;
-    } 
+        nombre++;
+    }
 
     //Getter
     public ArrayList<String> getListeDePieces() {
@@ -41,7 +41,7 @@ public class Vehicule {
     }
     public void setTypeDeMoteur(String typeDeMoteur) {
         TypeDeMoteur = typeDeMoteur;
-    }
+    }  
 
     public void ajouterunepiece(String p){
         ListeDePieces.add(p);
@@ -54,7 +54,8 @@ public class Vehicule {
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Vehicule [NumImmat=" + NumImmat + 
         ", NbrRoues=" + NbrRoues + ", TypeDeMoteur=" + 
         TypeDeMoteur + ", ListeDePieces=" + ListeDePieces + "]";

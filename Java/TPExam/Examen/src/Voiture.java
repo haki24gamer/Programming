@@ -17,5 +17,4 @@ public class Voiture extends Vehicule{
         ", Module=" + Module + "]";
     }
     
-    
 }
