@@ -92,6 +92,7 @@ void parcoursPrefixe(Noeud* racine) {
         printf("%d ", racine->cle);
         parcoursPrefixe(racine->gauche);
         parcoursPrefixe(racine->droite);
+    
     }
 }
 
