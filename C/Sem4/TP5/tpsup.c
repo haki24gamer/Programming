@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Définition de la structure d'un nœud d'arbre
+// Dï¿½finition de la structure d'un nï¿½ud d'arbre
 typedef struct Noeud {
     int cle;
     struct Noeud *gauche;
     struct Noeud *droite;
 } Noeud;
 
-// Fonction pour créer un nouveau nœud
+// Fonction pour crï¿½er un nouveau nï¿½ud
 Noeud* creerNoeud(int cle) {
     Noeud* nouveauNoeud = (Noeud*)malloc(sizeof(Noeud));
     nouveauNoeud->cle = cle;
@@ -16,7 +16,7 @@ Noeud* creerNoeud(int cle) {
     return nouveauNoeud;
 }
 
-// Fonction pour insérer un nœud dans l'arbre
+// Fonction pour insï¿½rer un nï¿½ud dans l'arbre
 Noeud* inserer(Noeud* racine, int cle) {
     if (racine == NULL) {
         return creerNoeud(cle);
@@ -29,7 +29,7 @@ Noeud* inserer(Noeud* racine, int cle) {
     return racine;
 }
 
-// Fonction pour rechercher une clé dans l'arbre
+// Fonction pour rechercher une clï¿½ dans l'arbre
 Noeud* rechercher(Noeud* racine, int cle) {
     if (racine == NULL || racine->cle == cle) {
         return racine;
@@ -40,7 +40,7 @@ Noeud* rechercher(Noeud* racine, int cle) {
     return rechercher(racine->droite, cle);
 }
 
-// Fonction pour trouver le nœud avec la plus grande clé
+// Fonction pour trouver le nï¿½ud avec la plus grande clï¿½
 Noeud* trouverMax(Noeud* racine) {
     if (racine == NULL || racine->droite == NULL) {
         return racine;
@@ -48,7 +48,7 @@ Noeud* trouverMax(Noeud* racine) {
     return trouverMax(racine->droite);
 }
 
-// Fonction pour trouver le nœud avec la plus petite clé
+// Fonction pour trouver le nï¿½ud avec la plus petite clï¿½
 Noeud* trouverMin(Noeud* racine) {
     if (racine == NULL || racine->gauche == NULL) {
         return racine;
@@ -56,7 +56,7 @@ Noeud* trouverMin(Noeud* racine) {
     return trouverMin(racine->gauche);
 }
 
-// Fonction pour supprimer un nœud dans l'arbre
+// Fonction pour supprimer un nï¿½ud dans l'arbre
 Noeud* supprimerNoeud(Noeud* racine, int cle) {
     if (racine == NULL) {
         return racine;
@@ -66,7 +66,7 @@ Noeud* supprimerNoeud(Noeud* racine, int cle) {
     } else if (cle > racine->cle) {
         racine->droite = supprimerNoeud(racine->droite, cle);
     } else {
-        // Nœud à supprimer trouvé
+        // Nï¿½ud ï¿½ supprimer trouvï¿½
         if (racine->gauche == NULL) {
             Noeud* temp = racine->droite;
             free(racine);
@@ -76,9 +76,9 @@ Noeud* supprimerNoeud(Noeud* racine, int cle) {
             free(racine);
             return temp;
         }
-        // Nœud avec deux enfants, trouver le successeur (minimum du sous-arbre droit)
+        // Nï¿½ud avec deux enfants, trouver le successeur (minimum du sous-arbre droit)
         Noeud* temp = trouverMin(racine->droite);
-        // Copier la clé du successeur
+        // Copier la clï¿½ du successeur
         racine->cle = temp->cle;
         // Supprimer le successeur
         racine->droite = supprimerNoeud(racine->droite, temp->cle);
@@ -86,7 +86,7 @@ Noeud* supprimerNoeud(Noeud* racine, int cle) {
     return racine;
 }
 
-// Fonction pour afficher le parcours préfixe de l'arbre
+// Fonction pour afficher le parcours prï¿½fixe de l'arbre
 void parcoursPrefixe(Noeud* racine) {
     if (racine != NULL) {
         printf("%d ", racine->cle);
@@ -100,7 +100,7 @@ int main() {
     int cles[] = {10, 4, 3, 8, 5, 20, 15};
     int i;
     
-    // Insertion des clés dans l'arbre
+    // Insertion des clï¿½s dans l'arbre
     for (i = 0; i < sizeof(cles) / sizeof(cles[0]); i++) {
         racine = inserer(racine, cles[i]);
     }
@@ -109,7 +109,7 @@ int main() {
     parcoursPrefixe(racine);
     printf("\n");
     
-    // Recherche d'une clé
+    // Recherche d'une clï¿½
     int cleRecherchee = 8;
     Noeud* noeudTrouve = rechercher(racine, cleRecherchee);
     if (noeudTrouve != NULL) {
@@ -126,13 +126,13 @@ int main() {
     Noeud* noeudMin = trouverMin(racine);
     printf("La cle minimale dans l'arbre est: %d\n", noeudMin->cle);
     
-    // Suppression d'une clé
+    // Suppression d'une clï¿½
     int cleSupprimer = 20;
     racine = supprimerNoeud(racine, cleSupprimer);
     printf("Parcours prefixe de l'arbre apres suppression de la cle %d: ", cleSupprimer);
     parcoursPrefixe(racine);
     printf("\n");
-    
+
     return 0;
 }
 

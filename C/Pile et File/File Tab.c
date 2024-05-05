@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <wchar.h>
+
 
 #define TAILLE_MAX 5
 
@@ -11,7 +11,7 @@ typedef struct file {
     int tab[TAILLE_MAX];
 } File;
 
-File fle; // Déclaration de la file globale
+File fle; // Dï¿½claration de la file globale
 
 void init_file() {
     fle.tete = 0;
@@ -68,22 +68,22 @@ int main() {
     init_file();
     int item, choice;
     int option = 1;
-    printf("\n\tImplémentation d'une file");
+    printf("\n\tImplï¿½mentation d'une file");
     while (option) {
         printf("\nMenu principal");
-        printf("\n1.Enfiler \n2.Défiler \n3.Afficher \n4.Exit");
+        printf("\n1.Enfiler \n2.Dï¿½filer \n3.Afficher \n4.Exit");
         printf("\nEntrez votre choix: ");
         scanf("%d", &choice);
         switch (choice) {
             case 1:
-                printf("\nEnter L'element à enfiler: ");
+                printf("\nEnter L'element ï¿½ enfiler: ");
                 scanf("%d", &item);
                 enfiler(item);
                 break;
             case 2:
                 if (!file_vide()) {
                     int x = defiler();
-                    printf("\nL'élément défiler est %d", x);
+                    printf("\nL'ï¿½lï¿½ment dï¿½filer est %d", x);
                 } else {
                     printf("\nErreur : la file est vide.");
                 }
