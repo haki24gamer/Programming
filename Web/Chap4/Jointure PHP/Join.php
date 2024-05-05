@@ -11,7 +11,6 @@
     //Recuperation
     $nom = $_POST["Nom"];
 
-
     //Creation de la requete
     $sql = "SELECT *
             FROM Etudiant

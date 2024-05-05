@@ -19,7 +19,7 @@
     $ligne = mysqli_fetch_row($result);
 
     
-
+    
     //Affichage
     //$ligne[0]
     $Nom=$ligne[1];
