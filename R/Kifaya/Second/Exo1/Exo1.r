@@ -47,5 +47,5 @@ proportion_arrondie <- round(proportion_hommes_bac_plus, digits = 3)
 proportion_arrondie
 
 #13
-
-
+table_contingence <- table(data$Genre, data$Diplome)
+table_contingence
