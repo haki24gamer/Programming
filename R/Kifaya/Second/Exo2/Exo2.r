@@ -50,8 +50,22 @@ studentbis <- merge(stu, bytest)
 commu <- ifelse(stu$black == 1, "Black", ifelse(stu$hispanic == 1, "Hispanic", "White"))
 stu$commu <- commu
 
+#9 Probleme
+moyenne = by(studentbis$score, commu, mean)
 
+#10
+result <- by(studentbis$score, studentbis$female, FUN = function(x) quantile(x, c(0.25, 0.5, 0.75)))
 
+#11
+et <- function(x) {
+  sqrt( (length(x)-1)/length(x) ) * sd(x)
+  }
+
+result <- by(studentbis$score, studentbis$female, FUN = et)
+
+#12
+studentbis$par.sup <- ifelse(studentbis$dadcoll == 1 | studentbis$momcoll == 1, 1, 0)
+deciles_par_sup <- by(studentbis$score, studentbis$par.sup, FUN = function(x) quantile(x, seq(0, 1, 0.1)))
 
 
 
