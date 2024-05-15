@@ -1,9 +1,10 @@
 #Exercice 1#
 #1
-data <- read.csv(file.choose(), sep = ";")
+data <- read.csv('television.txt', sep = ";")
+data
 
 #2
-nrow(data) 
+nrow(data)
 
 #3
 str(data) 
@@ -20,9 +21,11 @@ sum(data$DureeTV>=2*60)
 
 #7
 dataF = subset(data, Genre=="F")
+dataF
 
 #8
 dataF <- dataF[, -which(names(dataF)=="Genre")]
+dataF
 
 #9
 boxplot(data$DureeTV ~ data$Foyers, data = data, 
@@ -38,6 +41,7 @@ moyenne_arrondie
 
 #11
 Vec <- ifelse(data$Diplome %in% c("Bac", "SupBac+2", "Bac+2"), 1, 0)
+Vec
 
 #12
 hommes <- subset(data, Genre == "H")

@@ -1,6 +1,7 @@
 #Exercice 2#
 #1
-stu <- read.table(file.choose(), header=TRUE)
+stu <- read.table('etudiant.txt', header=TRUE)
+stu
 
 #2
 mean(stu$tuition) # la moyenne des frais de scolarité de tous les étudiants
@@ -16,8 +17,7 @@ quantile(stu$ed[stu$hispanic == 1 & stu$tuition > 1], 0.75)
 
 #4
 black_hispanic_stu <- subset(stu, black == 1 & hispanic == 1)
-
-if (nrow(black_hispanic_students) == 0) {
+if (nrow(black_hispanic_stu) == 0) {
   cat("Aucun étudiant n'a été codé simultanément comme black et hispanic.\n")
 } else {
   cat("Attention: Certains étudiants ont été codés simultanément comme black et hispanic.\n")
@@ -40,21 +40,29 @@ head(tab6) # Afficher les 6 premieres lignes du tab6
 #6
 tab7 <- stu[stu$hispanic == 1 & stu$incomehi == 1, ]
 tab7 <- tab7[, !(names(tab7) %in% c("hispanic", "black", "incomehi"))]
+tab7
 nombre_individus <- nrow(tab7)
+nombre_individus
 
 #7
-bytest <- read.table(file.choose(), header=TRUE)
-studentbis <- merge(stu, bytest)
+bytest <- read.table('bytest.txt', header=TRUE)
+head(bytest)
+studentbis <- cbind(stu, bytest)
+head(studentbis)
 
 #8
 commu <- ifelse(stu$black == 1, "Black", ifelse(stu$hispanic == 1, "Hispanic", "White"))
+commu
 stu$commu <- commu
+stu
 
 #9 Probleme
-moyenne = by(studentbis$score, commu, mean)
+moyenne <- by(studentbis$score, commu, mean)
+moyenne
 
 #10
 result <- by(studentbis$score, studentbis$female, FUN = function(x) quantile(x, c(0.25, 0.5, 0.75)))
+result
 
 #11
 et <- function(x) {
@@ -62,11 +70,13 @@ et <- function(x) {
   }
 
 result <- by(studentbis$score, studentbis$female, FUN = et)
+result
 
 #12
-studentbis$par.sup <- ifelse(studentbis$dadcoll == 1 | studentbis$momcoll == 1, 1, 0)
-deciles_par_sup <- by(studentbis$score, studentbis$par.sup, FUN = function(x) quantile(x, seq(0, 1, 0.1)))
-
+par.sup <- ifelse(studentbis$dadcoll == 1 | studentbis$momcoll == 1, 1, 0)
+par.sup
+deciles_par_sup <- by(studentbis$score, par.sup, FUN = function(x) quantile(x, seq(0, 1, 0.1)))
+deciles_par_sup
 
 
 
