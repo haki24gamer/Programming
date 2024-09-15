@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<table >
+    <thead>
+        <tr>        
+            <th>Company of owned stock</th>
+            <th>Number of shares</th>
+            <th>Current price</th>
+            <th>Total Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- TODO: Loop through the database entries to display them in this table -->
+
+
+            {% for info in infos %}
+                <tr>
+                    <th>{{info.name}} ({{info.symbol}})</th>
+                    <th>{{info.shares}}</th>
+                    <th>{{info.price}}</th>
+                    <th>{{info.total}}</th>
+                </tr>
+            {% endfor %}
+            <tr><th></th><th></th><th></th><th></th></tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>Owned Cash</th>
+                <th>{{Cash}}</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>Total</th>
+                <th>{{Total}}</th>
+            </tr>
+
+    </tbody>
+</table>
+{% endblock %}

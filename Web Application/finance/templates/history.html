@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+<table >
+    <thead>
+        <tr>
+            <th>Company of owned stock</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Number of shares</th>
+            <th>Date and time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for transactions in transactions %}
+        <tr>
+            <th>{{transactions.symbol}}</th>
+            <th>{{transactions.type}}</th>
+            <th id="price">{{transactions.price}}</th>
+            <th>{{transactions.shares}}</th>
+            <th>{{transactions.date}}</th>
+        <tr>
+
+        {% endfor %}
+
+    </tbody>
+</table>
+
+
+{% endblock %}

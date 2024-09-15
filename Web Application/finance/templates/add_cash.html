@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+<!-- Ask user for credit card information -->
+<h1>Add cash</h1>
+<form action="/add_cash" method="post">
+    <div class="form-group">
+        <input class="form-control" name="cash" placeholder="Amount to add" type="number">
+    </div>
+    <br>
+    <div class="form-group">
+        <input class="form-control" name="credit_card_number" placeholder="Credit card number" type="number">
+    </div>
+    <br>
+    <div class="form-group">
+        <input class="form-control" name="credit_card_code" placeholder="Security code" type="number">
+    </div>
+    <br>
+    <button class="btn btn-primary" type="submit">Add cash</button>
+</form>
+
+
+{% endblock %}
