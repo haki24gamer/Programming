@@ -49,5 +49,11 @@ public class etudiant {
     public void setMaClasse(classe maClasse) {
         MaClasse = maClasse;
     }
+
+
+    @Override
+    public String toString() {
+        return "etudiant [nom=" + nom + ", age=" + age + ", numero=" + numero + ", MaClasse=" + MaClasse + "]";
+    }
     
 }
