@@ -2,18 +2,18 @@
 import java.util.ArrayList;
 
 class Plat {
-    private String description;
+    private String nom;
     private Float prix;
-    private ArrayList<Commande> commandes = new ArrayList<>();
+    private ArrayList<Commande> commandes;
 
-    public Plat(String description, Float prix) {
-        this.description = description;
+    public Plat(String nom, Float prix) {
+        this.nom = nom;
         this.prix = prix;
         commandes = new ArrayList<Commande>();
     }
 
-    public String getDescription() {
-        return description;
+    public void getDescription() {
+        System.out.println("Plat [ nom: "+nom+", prix: "+prix+" ]"); 
     }
 
     public Float getPrix() {

@@ -5,17 +5,19 @@ public class Commande {
     private int numero;
     private Date date;
     private Client client;
-    private ArrayList<Plat> plats = new ArrayList<>();
+    private ArrayList<Plat> plats;
+    public static int count = 0;
 
-    public Commande(int numero, java.util.Date date2, Client client) {
-        this.numero = numero;
-        this.date = date2;
-        this.client = client;
+    public Commande() {
+        this.numero = count;
+        count++;
+        this.date = new Date();
         plats = new ArrayList<Plat>();
     }
 
     public void ajouterPlat(Plat plat) {
         plats.add(plat);
+
     }
 
     public Float CalculTotal() {
@@ -30,5 +32,8 @@ public class Commande {
         return plats;
     }
 
+    public void setClient(Client client) {
+        this.client = client;
+    }
 
 }

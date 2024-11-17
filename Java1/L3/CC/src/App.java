@@ -1,4 +1,3 @@
-import java.util.Date;
 
 public class App {
     public static void main(String[] args) {
@@ -6,7 +5,7 @@ public class App {
         Client client = new Client("Alice", 123456789);
 
         // b. Créer une commande
-        Commande commande = new Commande(1, new Date(), client);
+        Commande commande = new Commande();
 
         // c. Ajouter la commande aux commandes du client
         client.passerCommande(commande);
@@ -21,12 +20,12 @@ public class App {
 
         // f. Calculer le prix de la commande
         double prixTotal = commande.CalculTotal();
-        System.out.println("Prix total de la commande : " + prixTotal + " €");
+        System.out.println("Prix total de la commande : " + prixTotal);
 
         // g. Afficher les descriptions des plats de la commande
         System.out.println("Plats commandés :");
         for (Plat plat : commande.getPlats()) {
-            System.out.println("- " + plat.getDescription());
+            plat.getDescription();
         }
     }
 }
